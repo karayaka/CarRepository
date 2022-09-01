@@ -1,0 +1,14 @@
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/bin/Debug/net6.0/CarRepository.Domain.deps.json
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/bin/Debug/net6.0/CarRepository.Domain.runtimeconfig.json
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/bin/Debug/net6.0/CarRepository.Domain.dll
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/bin/Debug/net6.0/CarRepository.Domain.pdb
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.csproj.AssemblyReference.cache
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.AssemblyInfoInputs.cache
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.AssemblyInfo.cs
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.csproj.CoreCompileInputs.cache
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.dll
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/refint/CarRepository.Domain.dll
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.pdb
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/CarRepository.Domain.genruntimeconfig.cache
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.Domain/obj/Debug/net6.0/ref/CarRepository.Domain.dll

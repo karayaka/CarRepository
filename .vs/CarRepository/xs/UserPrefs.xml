@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{07DFCB36-D8DC-4BE0-89DA-CEE371E1A174}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CarRepository" expanded="True" selected="True">
+            <Node name="CarRepository.BLL" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Registrations" expanded="True" />
+              <Node name="Repositorys" expanded="True" />
+            </Node>
+            <Node name="CarRepository.WebApi" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CarRepository.WebApi PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BusController.cs" relfile="CarRepository.WebApi/Controllers/BusController.cs" line="50" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BusController.cs" relfile="CarRepository.WebApi/Controllers/BusController.cs" line="83" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BusController.cs" relfile="CarRepository.WebApi/Controllers/BusController.cs" line="101" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BusController.cs" relfile="CarRepository.WebApi/Controllers/BusController.cs" line="116" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BusController.cs" relfile="CarRepository.WebApi/Controllers/BusController.cs" line="66" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BoatController.cs" relfile="CarRepository.WebApi/Controllers/BoatController.cs" line="64" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BoatController.cs" relfile="CarRepository.WebApi/Controllers/BoatController.cs" line="31" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BoatController.cs" relfile="CarRepository.WebApi/Controllers/BoatController.cs" line="47" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BoatController.cs" relfile="CarRepository.WebApi/Controllers/BoatController.cs" line="82" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BoatController.cs" relfile="CarRepository.WebApi/Controllers/BoatController.cs" line="99" column="1" />
+      <Breakpoint file="/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/Controllers/BoatController.cs" relfile="CarRepository.WebApi/Controllers/BoatController.cs" line="114" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
