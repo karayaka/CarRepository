@@ -42,3 +42,8 @@
 /Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/obj/Debug/net6.0/ref/CarRepository.WebApi.dll
 /Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/bin/Debug/net6.0/AutoMapper.dll
 /Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/obj/Debug/net6.0/staticwebassets/msbuild.CarRepository.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/obj/Debug/net6.0/staticwebassets/msbuild.build.CarRepository.WebApi.props
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.CarRepository.WebApi.props
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.CarRepository.WebApi.props
+/Users/cagrikarayaka/Projects/CarRepository/CarRepository.WebApi/obj/Debug/net6.0/staticwebassets.pack.json
