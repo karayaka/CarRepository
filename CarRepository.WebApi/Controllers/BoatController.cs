@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarRepository.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class BoatController : Controller
+    public class BoatController : BaseController
     {
         private readonly IBoatRepository boatRepository;
 
@@ -37,7 +37,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
 
         }
@@ -53,13 +53,13 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
         // POST api/boat
         [HttpPost]
-        public async Task<IActionResult> Post([FromForm]BoatModel model)
+        public async Task<IActionResult> Post([FromBody]BoatModel model)
         {
             try
             {
@@ -70,13 +70,13 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
         // PUT api/boat
         [HttpPut]
-        public async Task<IActionResult> Put([FromForm]BoatModel model)
+        public async Task<IActionResult> Put([FromBody] BoatModel model)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
@@ -104,7 +104,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
         // GET api/boat/getByColor/color
@@ -119,7 +119,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
     }
