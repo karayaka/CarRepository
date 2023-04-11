@@ -26,7 +26,6 @@ namespace CarRepository.WebApi.Controllers
             mapper = _mapper;
         }
         // GET: api/boat
-        //test
         [HttpGet]
         public IActionResult Get()
         {
