@@ -5,9 +5,9 @@ namespace CarRepository.Domain.Enums
 {
     public enum Status
     {
-        [Display(Name = "Silindi")]
+        [Display(Name = "Deleted")]
         Deleted = 0,
-        [Display(Name = "Silinmedi")]
+        [Display(Name = "NonDeleted")]
         NonDeleted = 1,
     }
 }

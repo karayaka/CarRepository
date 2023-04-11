@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarRepository.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class CarController : Controller
+    public class CarController : BaseController
     {
         private readonly ICarRepository carRepository;
 
@@ -31,13 +31,12 @@ namespace CarRepository.WebApi.Controllers
         {
             try
             {
-                var model = carRepository.GetNonDeleted<Car>(t => true).Select(s => mapper.Map<CarModel>(s));
-
-                return Ok(new ResultModel<List<CarModel>>(_Data: model.ToList(), _Lenght: model.Count()));
+                var models = carRepository.GetAllCars();
+                return base.Ok(new ResultModel<List<CarModel>>(_Data:models.ToList(), _Lenght:models.Count()));
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
             
         }
@@ -48,19 +47,18 @@ namespace CarRepository.WebApi.Controllers
         {
             try
             {
-                var model = await carRepository.GetByID<Car>(id);
-                var result = mapper.Map<CarModel>(model);
-                return Ok(new ResultModel<CarModel>(_Data:result));
+                var model = await carRepository.GetCarByID(id);
+                return Ok(new ResultModel<CarModel>(_Data: model));
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
         // POST api/car
         [HttpPost]
-        public async Task<IActionResult> Post([FromForm]CarModel model)
+        public async Task<IActionResult> Post([FromBody]CarModel model)
         {
             try
             {
@@ -71,25 +69,25 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
         // PUT api/car
         [HttpPut]
-        public async Task<IActionResult> Put([FromForm]CarModel model)
+        public async Task<IActionResult> Put([FromBody]CarModel model)
         {
             try
             {
                 var result = await carRepository.GetByID<Car>(model.ID);
                 mapper.Map(model,result);
-                carRepository.Update(result);
+                carRepository.UpdateVehicle(result);
                 await carRepository.SaveChange();
                 return Ok();
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
@@ -105,7 +103,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
         [HttpGet("getByColor/{color}")]
@@ -119,11 +117,11 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
-        [HttpPost("ToggleCarHeadlights")]
-        public async Task<IActionResult> ToggleCarHeadlights([FromForm]int ID)
+        [HttpPost("ToggleCarHeadlights/{ID}")]
+        public async Task<IActionResult> ToggleCarHeadlights(int ID)
         {
             try
             {
@@ -133,7 +131,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
     }

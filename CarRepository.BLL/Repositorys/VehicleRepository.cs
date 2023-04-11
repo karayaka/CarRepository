@@ -1,6 +1,7 @@
 ﻿using System;
 using CarRepository.BLL.Interfaces;
 using CarRepository.DAL.CarRepositoryContext;
+using CarRepository.Domain.Exceptions;
 using CarRepository.Domain.Models.EntityModels.VehicleModels;
 
 namespace CarRepository.BLL.Repositorys
@@ -33,7 +34,7 @@ namespace CarRepository.BLL.Repositorys
             {
                 var model= await FindNonDeleted<T>(t => t.Color == color);
                 if (model == null)
-                    throw new Exception("vehicle not found");
+                    throw new NotFoundException();
                 return model;
             }
             catch (Exception ex)
@@ -41,8 +42,19 @@ namespace CarRepository.BLL.Repositorys
                 throw ex;
             }
         }
-        
 
+        public T UpdateVehicle<T>(T model) where T : BaseVehicle
+        {
+            try
+            {
+                Update<T>(model);
+                return model;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

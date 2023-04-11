@@ -31,7 +31,7 @@ namespace CarRepository.WebApi.Controllers
         {
             try
             {
-                var model = boatRepository.GetNonDeleted<Boat>(t => true).Select(s => mapper.Map<BoatModel>(s));
+                var model = boatRepository.GetAllBoad();
 
                 return Ok(new ResultModel<List<BoatModel>>(_Data: model.ToList(), _Lenght: model.Count()));
             }
@@ -48,8 +48,7 @@ namespace CarRepository.WebApi.Controllers
         {
             try
             {
-                var model = await boatRepository.GetByID<Boat>(id);
-                var result = mapper.Map<BoatModel>(model);
+                var result = await boatRepository.GetBoadByID(id);
                 return Ok(new ResultModel<BoatModel>(_Data: result));
             }
             catch (Exception ex)

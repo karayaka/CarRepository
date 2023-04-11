@@ -19,6 +19,13 @@ namespace CarRepository.BLL.Interfaces
         /// <param name="model"></param>
         /// <returns></returns>
         Task<T> AddVehicle<T>(T model) where T : BaseVehicle;
+        /// <summary>
+        /// udate vehicle
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        T UpdateVehicle<T>(T model) where T : BaseVehicle;
     }
 }
 

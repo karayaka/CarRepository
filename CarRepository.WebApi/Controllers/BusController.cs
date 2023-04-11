@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarRepository.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class BusController : Controller
+    public class BusController : BaseController
     {
 
         private readonly IBusRepository busRepository;
@@ -33,13 +33,13 @@ namespace CarRepository.WebApi.Controllers
         {
             try
             {
-                var model = busRepository.GetNonDeleted<Bus>(t => true).Select(s => mapper.Map<BusModel>(s));
+                var model = busRepository.GetAllBus();
 
                 return Ok(new ResultModel<List<BusModel>>(_Data: model.ToList(), _Lenght: model.Count()));
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
 
         }
@@ -50,19 +50,18 @@ namespace CarRepository.WebApi.Controllers
         {
             try
             {
-                var model = await busRepository.GetByID<Bus>(id);
-                var result = mapper.Map<BusModel>(model);
+                var result = await busRepository.GetBusByID(id);
                 return Ok(new ResultModel<BusModel>(_Data: result));
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
         // POST api/bus
         [HttpPost]
-        public async Task<IActionResult> Post([FromForm]BusModel model)
+        public async Task<IActionResult> Post([FromBody]BusModel model)
         {
             try
             {
@@ -73,25 +72,25 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
         // PUT api/bus
         [HttpPut]
-        public async Task<IActionResult> Put([FromForm]BusModel model)
+        public async Task<IActionResult> Put([FromBody] BusModel model)
         {
             try
             {
                 var result = await busRepository.GetByID<Bus>(model.ID);
                 mapper.Map(model, result);
-                busRepository.Update(result);
+                busRepository.UpdateVehicle(result);
                 await busRepository.SaveChange();
                 return Ok();
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
 
@@ -107,7 +106,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
         // GET api/bus/getByColor/color
@@ -122,7 +121,7 @@ namespace CarRepository.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Something went wrong");
+                return ErrorHadling(ex);
             }
         }
     }

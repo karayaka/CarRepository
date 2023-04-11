@@ -1,4 +1,6 @@
 ﻿using System;
+using CarRepository.Domain.Models.DTO.BoatModels;
+
 namespace CarRepository.BLL.Interfaces
 {
     /// <summary>
@@ -6,7 +8,17 @@ namespace CarRepository.BLL.Interfaces
     /// </summary>
     public interface IBoatRepository:IVehicleRepository
     {
-        //Boat-specific methods should be written
+        /// <summary>
+        /// get all boads
+        /// </summary>
+        /// <returns></returns>
+        IQueryable<BoatModel> GetAllBoad();
+        /// <summary>
+        /// get boad by ıd
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        Task<BoatModel> GetBoadByID(int ID);
     }
 }
 

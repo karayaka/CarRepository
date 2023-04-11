@@ -23,6 +23,7 @@
     <None Remove="Models\DTO\BaseModels\" />
     <None Remove="Models\DTO\BoatModels\" />
     <None Remove="Models\DTO\BusModels\" />
+    <None Remove="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -35,6 +36,7 @@
     <Folder Include="Models\DTO\BaseModels\" />
     <Folder Include="Models\DTO\BoatModels\" />
     <Folder Include="Models\DTO\BusModels\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
